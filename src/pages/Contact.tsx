@@ -44,7 +44,7 @@ const Contact = () => {
       </motion.div>
 
       <Grid container spacing={4}>
-        <Grid> item xs={12} md={6}
+        <Grid item xs={12} md={6}>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -53,7 +53,7 @@ const Contact = () => {
             <Paper elevation={3} sx={{ p: 4 }}>
               <form onSubmit={handleSubmit}>
                 <Grid container spacing={3}>
-                  <Grid> item xs={12} sm={6}
+                  <Grid item xs={12} sm={6}>
                     <TextField
                       fullWidth
                       label="Name"
@@ -63,7 +63,7 @@ const Contact = () => {
                       required
                     />
                   </Grid>
-                  <Grid> item xs={12} sm={6}
+                  <Grid item xs={12} sm={6}>
                     <TextField
                       fullWidth
                       label="Email"
@@ -74,7 +74,7 @@ const Contact = () => {
                       required
                     />
                   </Grid>
-                  <Grid> item xs={12}
+                  <Grid item xs={12}>
                     <TextField
                       fullWidth
                       label="Subject"
@@ -84,7 +84,7 @@ const Contact = () => {
                       required
                     />
                   </Grid>
-                  <Grid> item xs={12}
+                  <Grid item xs={12}>
                     <TextField
                       fullWidth
                       label="Message"
@@ -96,7 +96,7 @@ const Contact = () => {
                       required
                     />
                   </Grid>
-                  <Grid> item xs={12}
+                  <Grid item xs={12}>
                     <Button
                       type="submit"
                       variant="contained"
@@ -113,7 +113,7 @@ const Contact = () => {
           </motion.div>
         </Grid>
 
-        <Grid> item xs={12} md={6}
+        <Grid item xs={12} md={6}>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -122,7 +122,7 @@ const Contact = () => {
             <Paper elevation={3} sx={{ p: 4, height: '100%' }}>
               <Grid container spacing={3}>
                 {contactInfo.map((info, index) => (
-                  <Grid> item xs={12} key={info.title}
+                  <Grid item xs={12} key={info.title}>
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -162,4 +162,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
