@@ -1,6 +1,6 @@
 import { Box, Typography, Button, Container, IconButton } from '@mui/material';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin} from 'react-icons/fa';
 
 const Home = () => {
   return (
