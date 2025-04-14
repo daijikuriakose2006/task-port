@@ -22,7 +22,7 @@ const Home = () => {
           transition={{ duration: 0.8 }}
         >
           <Typography variant="h2" component="h1" gutterBottom>
-            Hi, I'm <span style={{ color: '#90caf9' }}>Your Name</span>
+            Hi, I'm <span style={{ color: '#90caf9' }}>Daiji Kuriakose</span>
           </Typography>
           <Typography variant="h4" color="text.secondary" gutterBottom>
             Full Stack Developer
