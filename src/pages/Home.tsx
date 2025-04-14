@@ -67,23 +67,16 @@ const Home = () => {
             <IconButton
               color="primary"
               size="large"
-              onClick={() => window.open('https://github.com/yourusername', '_blank')}
+              onClick={() => window.open('https://github.com/daijikuriakose2006', '_blank')}
             >
               <FaGithub />
             </IconButton>
             <IconButton
               color="primary"
               size="large"
-              onClick={() => window.open('https://linkedin.com/in/yourusername', '_blank')}
+              onClick={() => window.open('https://www.linkedin.com/in/daiji-kuriakose-2ab2a3328/', '_blank')}
             >
               <FaLinkedin />
-            </IconButton>
-            <IconButton
-              color="primary"
-              size="large"
-              onClick={() => window.open('https://twitter.com/yourusername', '_blank')}
-            >
-              <FaTwitter />
             </IconButton>
           </Box>
         </motion.div>
