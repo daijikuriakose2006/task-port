@@ -48,7 +48,7 @@ const Projects = () => {
 
       <Grid container spacing={4}>
         {projects.map((project, index) => (
-          <Grid item xs={12} md={6} lg={4} key={project.title}>
+          <Grid item xs={12} md={6} lg={4} key={project.title} component="div">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
