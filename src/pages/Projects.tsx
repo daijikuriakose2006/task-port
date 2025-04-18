@@ -1,4 +1,4 @@
-import { Box, Typography, Container, Grid, Card, CardContent, CardMedia, Button } from '@mui/material';
+import { Box, Typography, Container, Card, CardContent, CardMedia, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
