@@ -46,80 +46,79 @@ const Projects = () => {
         </Typography>
       </motion.div>
 
-      <Grid container spacing={4}>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 1fr', lg: '1fr 1fr 1fr' }, gap: 4 }}>
         {projects.map((project, index) => (
-          <Grid item xs={12} md={6} lg={4} key={project.title} component="div">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+          <motion.div
+            key={project.title}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <Card
+              sx={{
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                transition: 'transform 0.3s',
+                '&:hover': {
+                  transform: 'translateY(-5px)',
+                },
+              }}
             >
-              <Card
-                sx={{
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  transition: 'transform 0.3s',
-                  '&:hover': {
-                    transform: 'translateY(-5px)',
-                  },
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  height="200"
-                  image={project.image}
-                  alt={project.title}
-                />
-                <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {project.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" paragraph>
-                    {project.description}
-                  </Typography>
-                  <Box sx={{ mb: 2 }}>
-                    {project.technologies.map((tech) => (
-                      <Typography
-                        key={tech}
-                        variant="caption"
-                        sx={{
-                          mr: 1,
-                          px: 1,
-                          py: 0.5,
-                          bgcolor: 'primary.main',
-                          color: 'white',
-                          borderRadius: 1,
-                        }}
-                      >
-                        {tech}
-                      </Typography>
-                    ))}
-                  </Box>
-                  <Box sx={{ display: 'flex', gap: 1 }}>
-                    <Button
-                      variant="outlined"
-                      size="small"
-                      startIcon={<FaGithub />}
-                      onClick={() => window.open(project.github, '_blank')}
+              <CardMedia
+                component="img"
+                height="200"
+                image={project.image}
+                alt={project.title}
+              />
+              <CardContent sx={{ flexGrow: 1 }}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {project.title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" paragraph>
+                  {project.description}
+                </Typography>
+                <Box sx={{ mb: 2 }}>
+                  {project.technologies.map((tech) => (
+                    <Typography
+                      key={tech}
+                      variant="caption"
+                      sx={{
+                        mr: 1,
+                        px: 1,
+                        py: 0.5,
+                        bgcolor: 'primary.main',
+                        color: 'white',
+                        borderRadius: 1,
+                      }}
                     >
-                      Code
-                    </Button>
-                    <Button
-                      variant="contained"
-                      size="small"
-                      startIcon={<FaExternalLinkAlt />}
-                      onClick={() => window.open(project.demo, '_blank')}
-                    >
-                      Demo
-                    </Button>
-                  </Box>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </Grid>
+                      {tech}
+                    </Typography>
+                  ))}
+                </Box>
+                <Box sx={{ display: 'flex', gap: 1 }}>
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    startIcon={<FaGithub />}
+                    onClick={() => window.open(project.github, '_blank')}
+                  >
+                    Code
+                  </Button>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    startIcon={<FaExternalLinkAlt />}
+                    onClick={() => window.open(project.demo, '_blank')}
+                  >
+                    Demo
+                  </Button>
+                </Box>
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
-      </Grid>
+      </Box>
     </Container>
   );
 };
